@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ShellApp.Views.TeachersPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="TeachersLV">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="Bisque" Orientation="Horizontal">
+                                <Label
+                                    Text="{Binding Degree}"
+                                    TextColor="DarkOliveGreen"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="DarkRed"
+                                    VerticalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="AddTeacherBut" Text="Add teacher" Clicked="AddTeacherBut_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
